@@ -21,6 +21,7 @@ function twoSum(nums, target) {
 
     const complement = target - num;
 
+    // I think that this could work better with map, complement => index, as it avoids the final lookup
     if (complements.has(complement)) {
       return [nums.indexOf(complement), i];
     }
