@@ -31,6 +31,8 @@ class HashTable {
   getValues() {
     return this.storage.filter(Boolean);
   }
+  
+  // getKeys wouldn't work with this implementation, but more efficient as is without getKeys
 }
 
 const ht = new HashTable(8);
