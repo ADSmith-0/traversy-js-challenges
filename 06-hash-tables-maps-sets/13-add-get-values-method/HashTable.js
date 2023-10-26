@@ -96,7 +96,9 @@ class HashTable {
     this.storage = [];
   }
 
- // ADD getValues() METHOD
+  getValues() {
+    return this.storage.flatMap((_, index) => this.storage[index].flatMap(([_, value]) => [value]));
+  }
 }
 
 module.exports = HashTable;
