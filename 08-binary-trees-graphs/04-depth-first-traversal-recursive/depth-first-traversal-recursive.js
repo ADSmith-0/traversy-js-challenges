@@ -7,19 +7,11 @@ class Node {
 }
 
 function recDepthFirstTraversal(root) {
-  if (!root) {
-    return;
-  }
-
   const result = [];
 
-  result.push(root.data);
-
-  if (root.left) {
+  if (root !== null) {
+    result.push(root.data);
     result.push(...recDepthFirstTraversal(root.left));
-  }
-
-  if (root.right) {
     result.push(...recDepthFirstTraversal(root.right));
   }
 
