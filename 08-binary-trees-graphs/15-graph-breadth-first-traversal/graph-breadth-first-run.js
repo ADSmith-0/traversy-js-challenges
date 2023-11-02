@@ -1,14 +1,16 @@
 const Graph = require('./graph');
 const breadthFirstTraversal = require('./graph-breadth-first');
 
-const g = new Graph();
-g.addVertex('Tokyo');
-g.addVertex('Dallas');
-g.addVertex('Aspen');
-g.addEdge('Tokyo', 'Dallas');
-g.addEdge('Dallas', 'Aspen');
-g.addEdge('Tokyo', 'Aspen');
-// g.removeEdge('Dallas', 'Aspen');
-// g.removeVertex('Aspen');
+const graph = new Graph();
 
-console.log(breadthFirstTraversal(g, 'Tokyo'));
+graph.addVertex('A');
+graph.addVertex('B');
+graph.addVertex('C');
+graph.addVertex('D');
+
+graph.addEdge('A', 'B');
+graph.addEdge('C', 'D');
+
+const result = breadthFirstTraversal(graph, 'A');
+
+console.log(result);
