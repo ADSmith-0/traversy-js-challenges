@@ -32,4 +32,22 @@ describe('isValidBST', () => {
     const result = isValidBST(root);
     expect(result).toBe(false);
   });
+
+  it('should return false for an invalid binary search tree', () => {
+    const root = new Node(8);
+    const node4 = new Node(4);
+    const node10 = new Node(10);
+    const node2 = new Node(2);
+    const node7 = new Node(7);
+    const node12 = new Node(12);
+
+    root.left = node4;
+    root.right = node10;
+    node4.left = node2;
+    node10.left = node7;
+    node10.right = node12;
+
+    const result = isValidBST(root);
+    expect(result).toBe(false);
+  });
 });
