@@ -21,7 +21,11 @@ function quickSort(numbers) {
   const sortedLeftArr = quickSort(leftArr);
   const sortedRightArr = quickSort(rightArr);
 
-  return [...sortedLeftArr, pivot, ...sortedRightArr];
+  // [...sortedLeftArr, pivot, ...sortedRightArr];
+
+  sortedLeftArr.push(pivot);
+
+  return sortedLeftArr.concat(sortedRightArr);
 }
 
 module.exports = quickSort;
